@@ -1,0 +1,113 @@
+BODY {height: 100%;margin: 0 auto; background: #191919; color: #fc0;}
+
+.text{
+  color: white;
+}
+
+.form-group{
+  color: white;
+}
+
+
+.err{
+display: flex;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1865px;
+  background: blue;
+  height: 100%;
+  background: #191919;
+  left: 389px;
+}
+
+button {
+    width: 202px;
+    background: #1ba155;
+    color: #fff;
+    border: none;
+    padding: 1rem 5rem;
+    transition: .2s ease-in-out;
+   }
+
+BUTTON:hover {
+  background: #15703d;
+  -moz-box-shadow:0 0 15px #15703d;
+  -webkit-box-shadow:0 0 15px #15703d;
+  box-shadow:0 0 15px #15703d;
+  color: #ebebeb;
+}
+
+.ch{
+  overflow-y: scroll;
+  height: 600px;
+  max-height: 600px;
+  width: 1000px;
+  word-wrap: break-word;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  font-face: "Times New Roman";
+  font-size: 30;
+  background: #353535;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 10px solid #353535;
+  border-right: 25px solid #353535;
+  border-left: 25px solid #353535;
+  border-radius: 8px;
+  bottom: 10px;
+  color: #ebebeb;
+  -moz-box-shadow:0 0 15px #1ba155;
+  -webkit-box-shadow:0 0 15px #1ba155;
+  box-shadow:0 0 15px #1ba155;
+}
+
+.row{
+  overflow: auto;
+  height: 300px;
+  max-height: 600px;
+  max-width: 1000px;
+  word-wrap: break-word;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  font-face: "Times New Roman";
+
+}
+
+input[type=text]{
+  height: 70px;
+  max-height: 600px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  font-face: "Times New Roman";
+  font-size: 30;
+  background: #353535;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 10px solid #353535;
+  border-right: 25px solid #353535;
+  border-left: 25px solid #353535;
+  border-radius: 8px;
+  top: 10px;
+  left: 300px;
+  color: #ebebeb;
+
+  -moz-box-shadow:0 0 15px #1ba155;
+  -webkit-box-shadow:0 0 15px #1ba155;
+  box-shadow:0 0 15px #1ba155;
+}
+
+.btn-success{
+  width: 300px;
+  height: 60px;
+  left: 360px;
+  top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  font-size: 25;
+}

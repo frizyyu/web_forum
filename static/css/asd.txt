@@ -1,0 +1,15 @@
+<form method=post enctype=multipart/form-data>
+    <!-- single file for the "profile" field -->
+    <input type=file name=profile>
+    <!-- multiple files for the "charts" field -->
+    <input type=file multiple name=charts>
+    <input type=submit>
+</form>
+
+
+<form enctype="multipart/form-data" method="post" name="file">
+    {{form.file}}
+    <p>
+    <input type="submit">
+    </p>
+</form>

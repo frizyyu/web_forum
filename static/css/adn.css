@@ -1,0 +1,17 @@
+BODY {height: 100%;margin: 0 auto; background: #191919; color: #fc0;}
+
+.imgg{
+  position: relative;
+  left: 150px;
+}
+
+.enter{
+  bottom: 5px;
+}
+
+.title_handle_e{
+ position: relative;
+ z-index: 1;
+ height: 40px;
+ bottom: 15px;
+}

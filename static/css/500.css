@@ -1,0 +1,40 @@
+.err{
+display: flex;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1865px;
+  background: blue;
+  height: 100%;
+  bottom: 16px;
+  background: #191919;
+}
+
+.r{
+  align-items: center;
+  display: flex;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+  height: 400px;
+  background: red;
+  top: 150px;
+  border-radius: 10px;
+  border: 1px solid #28292a;
+  background: #28292a;
+  -moz-box-shadow:0 0 15px #1ba155;
+  -webkit-box-shadow:0 0 15px #1ba155;
+  box-shadow:0 0 15px #1ba155;
+}
+
+.text{
+  color: white;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  font-size: 63px;
+}
