@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/static/css/main.css"/>
+<link rel="stylesheet" href="/static/css/account.css"/>
+  <link rel="icon" type="image/png" href="/static/img/forum-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title> Профиль CarX forum </title>  
+<div class="menu">
+    <a href="/news/1" class="news-button">Новости</a>
+    <a href="/vinils/1" class="vin-button">Винилы</a>
+    <a href="/tuning/1" class="set-button">Тюнинг</a>
+    <a href="/chat" class="chat-button">Чат</a>
+  {% if session["name"]=="tehno_py" or session["name"] == "ya_lyceum" %}
+    <a href="/add_news" class="add-news-button">Добавить новость</a>
+  {% else %}
+    <a href="" class="add-news-button-blocked">Добавить новость</a>
+  {% endif %}
+</div>
+<div class="bg">
+<div class="pr">
+  <p class="plabel">Профиль</p>
+  <p class="usname">{{nme}}</p>
+  <a href="/login" class="login-button">Вход</a>
+  <a href="/registration" class="reg-button">Регистрация</a>
+  {% if fl==0 %}
+    <a href="/add_vinils" class="avin-button">Добавить винил</a>
+    <a href="/add_tuning" class="atun-button">Добавить тюнинг</a>
+    <a href="/logout" class="logout">Выйти</a>
+  {% endif %}
+</div>
+</div>

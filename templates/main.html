@@ -1,0 +1,36 @@
+  <link rel="stylesheet" href="/static/css/main.css"/>
+  <link rel="icon" type="image/png" href="/static/img/forum-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <div class="menu">
+    <a href="/news/1" class="news-button">Новости</a>
+    <a href="/vinils/1" class="vin-button">Винилы</a>
+    <a href="/tuning/1" class="set-button">Тюнинг</a>
+    <a href="/chat" class="chat-button" disabled>Чат</a>
+    <a href="/profile" class="prof-button">Профиль</a>
+  </div>
+<div class="down">
+  <div class="ilya_ds">
+    <p>Лучший ливрейщик</p>
+  </div>
+  <a href="https://discord.gg/NXTpE6s4vg" class="ds-button">Discord</a>
+  <div class="my_contacts">
+        <p>Связь со мной</p>
+  </div>
+  <a href="https://vk.com/v_khakas_v" class="vk-button">VK</a>
+  <a href="https://discord.gg/ruKSm96du2" class="myds-button">Discord</a>
+  <a href="/rules" class="rules-button">ПРАВИЛА</a>
+{% if fut==505 %}
+    <a href="" class="pg-button">Страница {{num}}</a>
+  {% else %}
+    <a href="{{fut}}" class="pg-button">Вперёд ({{fut}})</a>
+  {% endif %}
+
+  {% if last > 0 %}
+      <a href="{{last}}" class="lpg-button">Назад ({{last}})</a>
+  {% else %}
+      <a href="" class="lpg-button">Страница 1</a>
+  {% endif %}
+  <p class="pg-num">{{num}}</p>
+</div>
+{% block content %}
+{% endblock %}

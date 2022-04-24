@@ -1,0 +1,84 @@
+<title> Добавить тюнинг CarX forum </title>
+  <link rel="icon" type="image/png" href="/static/img/forum-icon.png">
+  <link rel="stylesheet" href="/static/css/main.css"/>
+  <link rel="stylesheet" href="/static/css/adt.css"/>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <form action="" method="post" enctype="multipart/form-data" novalidate>
+      {{form.csrf_token}}
+<div class="menu">
+    <a href="/news/1" class="news-button">Новости</a>
+    <a href="/vinils/1" class="vin-button">Винилы</a>
+    <a href="/tuning/1" class="set-button">Тюнинг</a>
+    <a href="/chat" class="chat-button">Чат</a>
+    <a href="/profile" class="prof-button">Профиль</a>
+  </div>
+<div class="bg">
+<div class="at">
+<div class="vin_title">
+  <b>Название тюнинга</b>
+  {{form.name}}
+{% for error in form.name.errors %}
+  <span style="color:#ff4a4a;">
+    <div class=="name_err">{{error}}</div>
+  </span>
+{% endfor %}
+</div>
+<p>
+<div class="vin_text">
+  <label for="vin_text"><b>Описание</b></label>
+  {{form.description}}
+{% for error in form.description.errors %}
+  <span style="color:#ff4a4a; width= 0px; height= 0px">
+    <div class=="desc_err">{{error}}</div>
+  </span>
+{% endfor %}
+</div>	
+<p>
+Выберите модель автомобиля
+{{form.car_type}}
+<p>
+<div class="imgg" style="max-height: 0px">
+Загрузите изображение
+<p>
+{{form.img_f}}
+{% for error in form.img_f.errors %}
+  <span style="color:#ff4a4a;">
+    {{error}}
+  </span>
+{% endfor %}
+</div>
+<p>
+<div class="ttun">
+Загрузите файл с тюнингом
+<p>
+{{form.file}}
+{% for error in form.file.errors %}
+  <span style="color:#ff4a4a;">
+    {{error}}
+  </span>
+{% endfor %}
+</div>
+<p>
+<div class="enter">
+<button type="submit">Отправить</button>
+</div>
+</form>
+<div class="title_handle_e">
+	{% with messages = get_flashed_messages() %}
+  	{% if messages %}
+    	<ul class=flashes>
+    	{% for message in messages %}
+		<span style="color:#ff4a4a;">
+		  <div class="alert alert-danger" role="alert">
+			  {{ message }}
+		  </div>
+    	{% endfor %}
+    	</ul>
+  	{% endif %}
+	{% endwith %}
+</div>
+</div>
+</div>
+
+

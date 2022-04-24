@@ -1,0 +1,66 @@
+<html>
+<title> Добавить новость CarX forum </title>
+  <link rel="icon" type="image/png" href="/static/img/forum-icon.png">
+  <link rel="stylesheet" href="/static/css/main.css"/>
+  <link rel="stylesheet" href="/static/css/adt.css"/>
+  <link rel="stylesheet" href="/static/css/adn.css"/>
+<form action="" method="post" enctype="multipart/form-data" novalidate>
+      {{form.csrf_token}}
+<div class="menu">
+    <a href="/news/1" class="news-button">Новости</a>
+    <a href="/vinils/1" class="vin-button">Винилы</a>
+    <a href="/tuning/1" class="set-button">Тюнинг</a>
+    <a href="/chat" class="chat-button">Чат</a>
+    <a href="/profile" class="prof-button">Профиль</a>
+  </div>
+<div class="bg">
+<div class="at">
+<div class="new_title">
+  <label for="new_title"><b>Заголовок</b></label>
+  {{form.title}}
+  {% for error in form.title.errors %}
+  <span style="color:#ff4a4a;">
+  {{error}}
+  </span>
+  {% endfor %}
+</div>
+<div class="new_text">
+  <label for="new_text"><b>Текст статьи</b></label>
+  {{form.description}}
+  {% for error in form.description.errors %}
+  <span style="color:#ff4a4a;">
+  {{error}}
+  </span>
+  {% endfor %}
+</div>
+{{ form.hidden_tag() }}
+<div class="imgg" style="max-weight: 50px;">
+Выберите изображение
+{{ form.file }}
+{% for error in form.file.errors %}
+  <span style="color:#ff4a4a;">
+    {{error}}
+  </span>
+{% endfor %}
+</div>
+{{form.csrf_token}}
+<p>
+<div class="enter">
+<button type="submit">Отправить</button>
+</div>
+</form>
+<div class="title_handle_e">
+	{% with messages = get_flashed_messages() %}
+  	{% if messages %}
+    	<ul class=flashes>
+    	{% for message in messages %}
+		<span style="color:#ff4a4a;">
+		  <div class="alert alert-danger" role="alert">
+			  {{ message }}
+		  </div>
+    	{% endfor %}
+    	</ul>
+  	{% endif %}
+	{% endwith %}
+</div>
+</html>

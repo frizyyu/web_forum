@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+{% block content %}
+  <link rel="stylesheet" href="/static/css/news.css"/>
+  <link rel="icon" type="image/png" href="/static/img/forum-icon.png">
+  <title> Новости CarX forum </title>
+<div class="nws">
+  <div class="text_news" style="overflow: auto;">
+     <h2 align="center";>{{title|safe}}</h2>
+     {{desc|safe}}
+    {% if file != 0 %}
+     <p align="center"><img src="/{{file|safe}}" alt="pic"></p>
+    {% endif %}
+     <p><h6 align="left";>{{dt|safe}}</h6></p>
+    {% if can_del %}
+       <p><a href="/news/delete/{{idd}}" class="del_vin">Удалить новость</a>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

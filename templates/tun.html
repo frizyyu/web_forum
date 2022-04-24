@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+{% block content %}
+  <link rel="stylesheet" href="/static/css/vin.css"/>
+  <title> Тюнинг CarX forum </title>
+  <link rel="icon" type="image/png" href="/static/img/forum-icon.png">
+<div class="vns">
+  <form action="" method="post" novalidate>
+  <div class="inp">
+    {{form.ct}}
+  </div>
+  <div class="find">
+      {{form.csrf_token}}
+      <button type="submit" action="">Найти</button>
+  </div>
+  </form>
+  <div class="text_news" style="overflow: auto;">
+     <h2 align="center";>{{name|safe}}</h2>
+     <div  class="desc">
+       {{desc|safe}}
+     </div>
+     {% if img_f != 0 %}
+       <p align="center"><img src="/{{img_f}}" alt="pic"></p>
+     {% endif %}
+     <p><a href="/{{file}}" download class="dow_vin">Скачать файл</a>
+     {% if can_del %}
+       <p><a href="/tuning/delete/{{idd}}" class="del_vin">Удалить файл</a>
+     {% endif %}
+    <div class="inf_text">
+       <align="left"; height=0>Тюнинг для модели {{car|safe}}
+       <p><align="left"; height=0>Опубликовал пользователь {{usr|safe}}
+       <p><align="left"; height=0>Дата публикации: {{dt|safe}}
+    </div>
+  </div>
+</div>
+{% endblock %}
