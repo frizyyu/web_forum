@@ -4,7 +4,7 @@ import urllib
 from aiogram import Bot, types, Dispatcher
 from aiogram.utils import executor
 
-TOKEN = "5288298713:AAFW6cXZ2YmVb3sP6xfyzgNBjLqt8XIA7NY"
+TOKEN = "YOUR TOKEN"
 bot = Bot(token=TOKEN, parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot)
 
