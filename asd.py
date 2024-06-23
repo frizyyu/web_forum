@@ -14,7 +14,7 @@ from flask import session
 from flask_socketio import SocketIO, send
 
 app = Flask(__name__, template_folder='templates')
-app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
+app.config['SECRET_KEY'] = 'SECRET KEY'
 db_session.global_init("db/database.db")
 db_sess = db_session.create_session()
 socketio = SocketIO(app, cors_allowed_origins='*', manage_session=False)
